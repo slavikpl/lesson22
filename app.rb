@@ -24,12 +24,12 @@ post '/visit' do
 		@phone = params[:phone]
 		@datetime = params[:datetime]
 		@namemaster = params[:namemaster]
-		@title="Thank you"
-		
+		@title = "Thank you"
+		@color = params[:color]
 		
 
 		f = File.open './public/user.txt', 'a'
-	         f.write "User: #{@username}, Phone: #{@phone}, Date and time: #{@datetime}\n Сотрудник: #{@namemaster}\n "
+	         f.write "User: #{@username}, Phone: #{@phone}, Date and time: #{@datetime}\n Сотрудник: #{@namemaster}\n Цвет волос: #{@color}\n\n"
 	         f.close
   
 	         erb :message
